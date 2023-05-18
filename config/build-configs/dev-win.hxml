@@ -1,0 +1,4 @@
+-debug
+
+# Build targets
+config/targets/buildtarget-dev-win.hxml

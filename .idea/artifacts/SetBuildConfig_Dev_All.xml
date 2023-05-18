@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="SetBuildConfig-Dev-All">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/config/build-configs/dev-all.hxml" output-file-name="current-build-config.hxml" />
+    </root>
+  </artifact>
+</component>
