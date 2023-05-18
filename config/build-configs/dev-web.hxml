@@ -1,4 +1,4 @@
 -debug
 
 # Build targets
-config/targets/buildtarget-dev-win.hxml
+config/targets/buildtarget-dev-web.hxml

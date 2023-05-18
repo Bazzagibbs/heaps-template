@@ -1,2 +1,3 @@
 -lib hlsdl
+-lib hashlink
 -hl bin-int/dist/port/my-game-name.c

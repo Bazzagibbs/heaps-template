@@ -1,3 +1,4 @@
 -lib hldx
+-lib hashlink
 -hl bin-int/dist/win/my-game-name.c
 -D hlgen.makefile=vs2017

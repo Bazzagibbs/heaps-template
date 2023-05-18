@@ -6,7 +6,7 @@
     <option name="customExecutable" value="false" />
     <option name="customExecutablePath" value="" />
     <option name="customFileToLaunch" value="true" />
-    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/bin/dev/win/game.hl" />
+    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/bin/dist/win/my-game-name.hl" />
     <option name="customRemoteDebugging" value="false" />
     <option name="projectPathOnTarget" />
     <option name="selectedOptions">
@@ -17,6 +17,9 @@
         <artifact name="SetBuildConfig-Dist-All" />
       </option>
       <option name="Make" enabled="true" />
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="WebContainer-Dist" />
+      </option>
     </method>
   </configuration>
 </component>

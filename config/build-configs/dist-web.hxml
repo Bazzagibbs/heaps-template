@@ -1,2 +1,2 @@
 # Build targets
-config/targets/buildtarget-dist-port.hxml
+config/targets/buildtarget-dist-web.hxml
