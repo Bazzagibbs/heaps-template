@@ -3,6 +3,10 @@ const { src, dest, series, symlink} = require('gulp');
 const replace = require('gulp-replace');
 const rename = require('gulp-rename');
 
+const macroTokenRegex = /\$[A-Z0-9_]+\$/g;
+
+const macroTransformRegex = /_[a-z]/g;
+
 class BuildLog {
     // From build config/settings
     name = "New Heaps Project";
@@ -66,17 +70,20 @@ function setBuildConfig(done){
 
     let dirFormat = projSettings["build"]["directoryFormat"];
 
-    for(let target in buildLog.targets){
+    buildLog.targets.forEach((target) => {
         // $MY_MACRO_NAME$ => myMacroName => buildLog[myMacroName]
-        buildLog.outputDirs.push(dirFormat.replaceAll(/\$[A-Z0-9_]+\$/g, (tok) => {
-            let macroName = tok.substring(1, tok.length - 2)
+        buildLog.outputDirs.push(dirFormat.replaceAll(macroTokenRegex, (tok) => {
+            let macroName = tok.substring(1, tok.length - 1)
                 .toLowerCase()
-                .replaceAll(/_[a-z]/, (wordStartChar) => {
-                    return wordStartChar.charAt(1).toUpperCase();
+                .replaceAll(macroTransformRegex, (wordStartChar) => {
+                    return wordStartChar.charAt(1).toUpperCase()
                 });
+            if(macroName === 'target') {
+                return target;
+            }
             return buildLog[macroName].toString();
         }));
-    }
+    });
     buildLog.store();
 
     // Create temporary config hxml file for target
@@ -87,21 +94,21 @@ function setBuildConfig(done){
 
     let i = 0;
     let numTargets = buildLog.targets.length;
-    for(let target in buildLog.targets) {
+    buildLog.targets.forEach(target => {
         let targetFile = `${buildLog.tier}-${target}.hxml`;
         buildLog.targetFiles.push(targetFile);
-        genHxmlString += `../../temp/build/targets/${targetFile}`;
+        genHxmlString += `temp/build/targets/${targetFile}\n`;
         if(i < numTargets -1){
             genHxmlString += "--next\n"
         }
         i++;
-    }
+    });
 
     fs.writeFileSync('../../temp/build/config-generated.hxml', genHxmlString);
 
     // Copy and transform build targets to temp dir
-    Object.entries(buildLog.targetFiles).forEach((targetFile, idx) => {
-        return src(`../build/targets/${targetFile}`)
+    buildLog.targetFiles.forEach((targetFile, idx) => {
+        return src(`../build-targets/${targetFile}`)
             .pipe(replace('replaceme-output-dir', buildLog.outputDirs[idx]))
             .pipe(replace('replaceme-application-name', buildLog.name))
             .pipe(dest('../../temp/build/targets/'));
@@ -126,13 +133,16 @@ function setRunTarget() {
     if(buildLog.targets[0] === 'web') {
         targetFileName = 'index';
     }
-
-    return src(`../../${buildLog.outputDirs[0]}/${targetFileName}.*`)
+    let srcPath = `\"../../${buildLog.outputDirs[0]}/${targetFileName}.*\"`;
+    console.log(srcPath);
+    return src(srcPath)
         .pipe(rename('run-latest-build.lnk'))
-        .pipe(symlink(`../../temp/`))
+        .pipe(symlink(`../../temp/`));
 }
 
 // Register build steps in Gulp
 exports.prepareBuild = setBuildConfig;
 exports.prepareWebContainer = prepareWebContainer;
 exports.setRunTarget = setRunTarget;
+
+// TODO: symlink not working

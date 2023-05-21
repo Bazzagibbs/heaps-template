@@ -6,7 +6,7 @@
     <option name="customExecutable" value="false" />
     <option name="customExecutablePath" value="" />
     <option name="customFileToLaunch" value="true" />
-    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/bin/dev/win/replaceme-my-game-name.hl" />
+    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/temp/run-latest-build.lnk" />
     <option name="customRemoteDebugging" value="false" />
     <option name="projectPathOnTarget" />
     <option name="selectedOptions">
@@ -20,10 +20,20 @@
         <tasks>
           <task>prepareBuild</task>
         </tasks>
-        <arguments>--build-config dev-win.hxml</arguments>
+        <arguments>--tier dev --target win</arguments>
         <envs />
       </option>
       <option name="Make" enabled="true" />
+      <option name="GulpBeforeRunTask" enabled="true">
+        <node-interpreter>project</node-interpreter>
+        <node-options />
+        <gulpfile>$PROJECT_DIR$/config/gulp/gulpfile.js</gulpfile>
+        <tasks>
+          <task>setRunTarget</task>
+        </tasks>
+        <arguments />
+        <envs />
+      </option>
     </method>
   </configuration>
 </component>
