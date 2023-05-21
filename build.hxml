@@ -1,8 +1,5 @@
-# class paths
+# Common settings
 -cp src
-# entry point
 -main Main
-# libraries
 -lib heaps
-
-out/artifacts/current-build-config.hxml
+temp/build/config-generated.hxml

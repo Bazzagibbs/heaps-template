@@ -1,0 +1,3 @@
+-lib hlsdl
+-lib hashlink
+-hl replaceme-output-dir/replaceme-application-name.c

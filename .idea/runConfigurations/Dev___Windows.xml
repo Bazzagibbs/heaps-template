@@ -6,15 +6,22 @@
     <option name="customExecutable" value="false" />
     <option name="customExecutablePath" value="" />
     <option name="customFileToLaunch" value="true" />
-    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/bin/dev/win/my-game-name.hl" />
+    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/bin/dev/win/replaceme-my-game-name.hl" />
     <option name="customRemoteDebugging" value="false" />
     <option name="projectPathOnTarget" />
     <option name="selectedOptions">
       <list />
     </option>
     <method v="2">
-      <option name="BuildArtifacts" enabled="true">
-        <artifact name="SetBuildConfig-Dev-Win" />
+      <option name="GulpBeforeRunTask" enabled="true">
+        <node-interpreter>project</node-interpreter>
+        <node-options />
+        <gulpfile>$PROJECT_DIR$/config/gulp/gulpfile.js</gulpfile>
+        <tasks>
+          <task>prepareBuild</task>
+        </tasks>
+        <arguments>--build-config dev-win.hxml</arguments>
+        <envs />
       </option>
       <option name="Make" enabled="true" />
     </method>

@@ -1,9 +1,0 @@
--debug
-
---each
-# Build targets
-config/targets/buildtarget-dev-port.hxml
---next
-config/targets/buildtarget-dev-win.hxml
---next
-config/targets/buildtarget-dev-web.hxml

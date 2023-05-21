@@ -1,12 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Distribution - All" type="HaxeApplicationRunConfiguration" factoryName="Haxe Application" show_console_on_std_err="false" show_console_on_std_out="false">
+  <configuration default="false" name="Development - Web" type="HaxeApplicationRunConfiguration" factoryName="Haxe Application" show_console_on_std_err="false" show_console_on_std_out="false">
     <module name="my-game-name" />
     <option name="allowRunningInParallel" value="false" />
     <option name="customDebugPort" value="6972" />
     <option name="customExecutable" value="false" />
     <option name="customExecutablePath" value="" />
     <option name="customFileToLaunch" value="true" />
-    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/temp/run-last-build.lnk" />
+    <option name="customFileToLaunchPath" value="$PROJECT_DIR$/bin/dev/web/index.html" />
     <option name="customRemoteDebugging" value="false" />
     <option name="projectPathOnTarget" />
     <option name="selectedOptions">
@@ -20,7 +20,17 @@
         <tasks>
           <task>prepareBuild</task>
         </tasks>
-        <arguments>--build-config dist-all.hxml</arguments>
+        <arguments>--build-config dev-web.hxml</arguments>
+        <envs />
+      </option>
+      <option name="GulpBeforeRunTask" enabled="true">
+        <node-interpreter>project</node-interpreter>
+        <node-options />
+        <gulpfile>$PROJECT_DIR$/config/gulp/gulpfile.js</gulpfile>
+        <tasks>
+          <task>prepareWebContainer</task>
+        </tasks>
+        <arguments />
         <envs />
       </option>
       <option name="Make" enabled="true" />

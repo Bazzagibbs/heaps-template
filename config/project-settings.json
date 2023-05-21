@@ -1,0 +1,10 @@
+{
+  "application": {
+    "name": "New Heaps Project",
+    "company": "DefaultCompany",
+    "version": "0.0.0"
+  },
+  "build": {
+    "directoryFormat": "bin/$TIER$/$VERSION$/$TARGET$"
+  }
+}

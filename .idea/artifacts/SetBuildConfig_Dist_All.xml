@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact name="SetBuildConfig-Dist-All">
-    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
-    <root id="root">
-      <element id="file-copy" path="$PROJECT_DIR$/config/build-configs/dist-all.hxml" output-file-name="current-build-config.hxml" />
-    </root>
-  </artifact>
-</component>

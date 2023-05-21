@@ -1,6 +1,0 @@
-# Build targets
-config/targets/buildtarget-dist-port.hxml
---next
-config/targets/buildtarget-dist-win.hxml
---next
-config/targets/buildtarget-dist-web.hxml

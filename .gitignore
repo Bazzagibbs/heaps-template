@@ -1,3 +1,6 @@
 /out/
 /bin/
 /bin-int/
+/temp/
+/node_modules/
+!/node_modules/.package-lock.json

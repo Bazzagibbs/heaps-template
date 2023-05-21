@@ -1,0 +1,4 @@
+-lib hldx
+-lib hashlink
+-hl replaceme-output-dir/replaceme-application-name.c
+-D hlgen.makefile=vs2017

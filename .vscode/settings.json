@@ -1,0 +1,12 @@
+{
+    "haxe.configurations": [
+        ["config/build/dev-all.hxml"],
+        ["config/build/dev-port.hxml"],
+        ["config/build/dev-win.hxml"],
+        ["config/build/dev-web.hxml"],
+        ["config/build/dist-all.hxml"],
+        ["config/build/dist-port.hxml"],
+        ["config/build/dist-win.hxml"],
+        ["config/build/dist-web.hxml"]
+    ]
+}

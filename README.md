@@ -2,22 +2,13 @@
 
 This is an empty template for creating a new Heaps.io project.
 
-## Set Up Project Name
+## Build system macros
 
-Find and replace in the project:
-- my-game-name
+Files can be preprocessed using Gulp. The gulpfile is located in [config/gulp/gulpfile.js](config/gulp/gulpfile.js).
 
-## Run Configurations - Intellij IDEA
+Pass the following parameters as arguments to the gulp invocation:
 
-Currently included run configurations include
-- Development - Windows
-- Distribution - All
-
-Other run configurations can be created as required.
-1. Add a "Before launch > Build Artifacts"
-2. Select the desired build configuration
-
-## To Do
-
-- Automate macro replacement
-- Automate Distribution - Windows step: C compilation
+- `--tier`: dev, dist
+- `--target`: port, web, win
+  - Multiple may be passed in the following format: `--target port,web,win`
+  - The first target listed will be run after building.
