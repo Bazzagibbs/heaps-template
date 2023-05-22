@@ -2,5 +2,5 @@
 /bin/
 /bin-int/
 /temp/
-/node_modules/
-!/node_modules/.package-lock.json
+/config/gulp/node_modules/
+!/config/gulp/node_modules/.package-lock.json

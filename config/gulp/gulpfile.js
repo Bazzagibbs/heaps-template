@@ -133,10 +133,10 @@ function setRunTarget() {
     if(buildLog.targets[0] === 'web') {
         targetFileName = 'index';
     }
-    let srcPath = `\"../../${buildLog.outputDirs[0]}/${targetFileName}.*\"`;
+    let srcPath = `../../${buildLog.outputDirs[0]}/${targetFileName}.*`;
     console.log(srcPath);
     return src(srcPath)
-        .pipe(rename('run-latest-build.lnk'))
+        // .pipe(rename('run-latest-build.lnk'))
         .pipe(symlink(`../../temp/`));
 }
 
