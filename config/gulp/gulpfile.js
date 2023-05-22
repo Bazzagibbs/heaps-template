@@ -127,22 +127,7 @@ function prepareWebContainer() {
         .pipe(dest(`../../${webOutputDir}`));
 }
 
-function setRunTarget() {
-    let buildLog = new BuildLog(true);
-    let targetFileName = buildLog.name;
-    if(buildLog.targets[0] === 'web') {
-        targetFileName = 'index';
-    }
-    let srcPath = `../../${buildLog.outputDirs[0]}/${targetFileName}.*`;
-    console.log(srcPath);
-    return src(srcPath)
-        // .pipe(rename('run-latest-build.lnk'))
-        .pipe(symlink(`../../temp/`));
-}
 
 // Register build steps in Gulp
 exports.prepareBuild = setBuildConfig;
 exports.prepareWebContainer = prepareWebContainer;
-exports.setRunTarget = setRunTarget;
-
-// TODO: symlink not working
