@@ -13,27 +13,10 @@
       <list />
     </option>
     <method v="2">
-      <option name="GulpBeforeRunTask" enabled="true">
-        <node-interpreter>project</node-interpreter>
-        <node-options />
-        <gulpfile>$PROJECT_DIR$/config/gulp/gulpfile.js</gulpfile>
-        <tasks>
-          <task>prepareBuild</task>
-        </tasks>
-        <arguments>--build-config dev-web.hxml</arguments>
-        <envs />
-      </option>
-      <option name="GulpBeforeRunTask" enabled="true">
-        <node-interpreter>project</node-interpreter>
-        <node-options />
-        <gulpfile>$PROJECT_DIR$/config/gulp/gulpfile.js</gulpfile>
-        <tasks>
-          <task>prepareWebContainer</task>
-        </tasks>
-        <arguments />
-        <envs />
-      </option>
       <option name="Make" enabled="true" />
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="prepare web container dev" />
+      </option>
     </method>
   </configuration>
 </component>

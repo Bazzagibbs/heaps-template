@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="prepare web container dev">
+    <output-path>$PROJECT_DIR$/bin/dev/web</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/template/index.html" />
+    </root>
+  </artifact>
+</component>

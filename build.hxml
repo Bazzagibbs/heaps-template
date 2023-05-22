@@ -1,5 +1,0 @@
-# Common settings
--cp src
--main Main
--lib heaps
-temp/build/config-generated.hxml

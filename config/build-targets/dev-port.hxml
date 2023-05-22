@@ -1,2 +1,9 @@
+--debug
+
+-cp ../../src
+-main Main
+-lib heaps
+
 -lib hlsdl
--hl replaceme-output-dir/replaceme-application-name.hl
+-lib hashlink
+-hl ../../bin/dev/port/application.hl
