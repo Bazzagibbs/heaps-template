@@ -17,7 +17,10 @@ Note: dist-port and dist-win builds will output C code into its "intermediate" o
 
 ## Build Config Setup (VSCode)
 
-Work in progress
+1. Select Haxe Configuration .hxml file at the bottom of the window.
+2. Select matching Run Configuration at the bottom of the window (play+debug icon)
+
+Web targets may require copying the "templates/index.html" file into the output directory "bin/X/web/index.html" the first time they are run.
 
 ## Build target differences
 

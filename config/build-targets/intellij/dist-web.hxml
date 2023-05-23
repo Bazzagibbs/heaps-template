@@ -1,6 +1,6 @@
--cp ../../src
+-cp ../../../src
 -main Main
 -lib heaps
 
--js ../../bin/dist/web/application.js
+-js ../../../bin/dist/web/application.js
 # Also use artifact manager to combine with index.html

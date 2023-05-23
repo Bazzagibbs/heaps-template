@@ -3,7 +3,7 @@
   <component name="HaxeModuleSettingsStorage">
     <option name="buildConfig" value="1" />
     <option name="haxeTarget" value="HashLink" />
-    <option name="hxmlPath" value="$MODULE_DIR$/config/build-targets/dev-port.hxml" />
+    <option name="hxmlPath" value="$MODULE_DIR$/config/build-targets/intellij/dev-port.hxml" />
     <option name="outputFolder" value="$MODULE_DIR$/temp/production/my-game-name" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
@@ -12,9 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/bin-int" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
-      <excludeFolder url="file://$MODULE_DIR$/config/gulp/node_modules" />
     </content>
     <orderEntry type="jdk" jdkName="Haxe Toolkit" jdkType="Haxe toolkit" />
     <orderEntry type="library" exported="" name="Heaps 1.10.0" level="application" />

@@ -1,0 +1,6 @@
+config/build-targets/vscode/dist-port.hxml
+--next
+config/build-targets/vscode/dist-web.hxml
+--next
+config/build-targets/vscode/dist-win.hxml
+

@@ -1,12 +1,11 @@
 {
     "haxe.configurations": [
-        ["config/build/dev-all.hxml"],
-        ["config/build/dev-port.hxml"],
-        ["config/build/dev-win.hxml"],
-        ["config/build/dev-web.hxml"],
-        ["config/build/dist-all.hxml"],
-        ["config/build/dist-port.hxml"],
-        ["config/build/dist-win.hxml"],
-        ["config/build/dist-web.hxml"]
+        ["config/build-targets/vscode/build-dist-all.hxml"],
+        ["config/build-targets/vscode/dev-port.hxml"],
+        ["config/build-targets/vscode/dev-win.hxml"],
+        ["config/build-targets/vscode/dev-web.hxml"],
+        ["config/build-targets/vscode/dist-port.hxml"],
+        ["config/build-targets/vscode/dist-win.hxml"],
+        ["config/build-targets/vscode/dist-web.hxml"]
     ]
 }

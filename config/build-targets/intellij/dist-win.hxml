@@ -1,0 +1,7 @@
+-cp ../../../src
+-main Main
+-lib heaps
+
+-lib hldx
+-lib hashlink
+-hl ../../../bin/dist/win/intermediate/application.c

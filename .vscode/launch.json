@@ -1,44 +1,17 @@
 {
   "version": "0.2.0",
-  "tasks": [
-    {
-      "label": "gulpPrepareBuild",
-      "type": "gulp",
-      "task": "prepareBuild",
-      "problemMatcher": []
-    },
-    {
-      "label": "gulpPrepareWebContainer",
-      "type": "gulp",
-      "task": "prepareWebContainer",
-      "problemMatcher": []
-    },
-
-    {
-      "label": "haxeCurrentConfig",
-      "type": "haxe",
-      "args": "current configuration"
-    },
-
-    {
-      "label": "customHaxeBuild",
-      "dependsOn": [
-        "gulpPrepareBuild",
-        "haxeCurrentConfig"
-      ]
-    },
-
-    {
-      "label": "customHaxeBuildWeb",
-      "dependsOn":[
-        "gulpPrepareBuild",
-        "haxeCurrentConfig",
-        "gulpPrepareWebContainer"
-      ]
-    }
-  ],
-  
   "configurations": [
+
+    {
+      "name": "Dev Portable",
+      "request": "launch",
+      "type": "hl",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": {
+        "type": "haxe",
+        "args": "active configuration",
+      }
+    },
     {
       "name": "Dev Web",
       "request": "launch",
@@ -47,27 +20,28 @@
       "webRoot": "${workspaceFolder}/bin/dev/web",
       "preLaunchTask": {
         "type": "haxe",
-        "args": "active configuration"
+        "args": "active configuration",
       }
     },
     {
       "name": "Dev Windows",
       "request": "launch",
       "type": "hl",
-      "cwd": "${workspaceFolder}/bin/dev/win",
+      "cwd": "${workspaceFolder}",
       "preLaunchTask": {
         "type": "haxe",
         "args": "active configuration"
       }
     },
     {
-      "name": "Dev Portable",
+      "name": "Dist Web",
       "request": "launch",
-      "type": "hl",
-      "cwd": "${workspaceFolder}/bin/dev/port",
+      "type": "chrome",
+      "file": "${workspaceFolder}/bin/dist/web/index.html",
+      "webRoot": "${workspaceFolder}/bin/dist/web",
       "preLaunchTask": {
-        "task": "haxe",
-        "type": "active configuration"
+        "type": "haxe",
+        "args": "active configuration"
       }
     }
   ]

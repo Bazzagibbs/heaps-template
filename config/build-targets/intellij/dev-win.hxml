@@ -1,0 +1,9 @@
+--debug
+
+-cp ../../../src
+-main Main
+-lib heaps
+
+-lib hldx
+-lib hashlink
+-hl ../../../bin/dev/port/application.hl
