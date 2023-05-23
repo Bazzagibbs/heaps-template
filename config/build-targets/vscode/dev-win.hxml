@@ -6,4 +6,4 @@
 
 -lib hldx
 -lib hashlink
--hl bin/dev/port/application.hl
+-hl bin/dev/win/application.hl
