@@ -3,7 +3,7 @@
   <component name="HaxeModuleSettingsStorage">
     <option name="buildConfig" value="1" />
     <option name="haxeTarget" value="HashLink" />
-    <option name="hxmlPath" value="$MODULE_DIR$/config/build-targets/intellij/dev-win.hxml" />
+    <option name="hxmlPath" value="$MODULE_DIR$/config/build-targets/intellij/dev-port.hxml" />
     <option name="outputFolder" value="$MODULE_DIR$/temp/production/my-game-name" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
